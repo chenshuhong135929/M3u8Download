@@ -30,8 +30,8 @@ public class M3u8Download {
      * 视频的下载路径
      * */
 
-    //public static final String DOWNLOAD_PATH = "/usr/local/m2m/temp/";
-    public static final String DOWNLOAD_PATH = "E:\\cshi\\vode\\";
+    public static final String DOWNLOAD_PATH = "/usr/local/m2m/temp/";
+    //public static final String DOWNLOAD_PATH = "E:\\cshi\\vode\\";
 
     /*
      * m3u8文件的路径
@@ -55,11 +55,7 @@ public class M3u8Download {
 
         try {
             File tfile = new File(DOWNLOAD_PATH);
-
-            if (!tfile.exists()) {// 下载过的就不管了
-                downM3u8(M3U8_URL);
-             }
-
+            downM3u8(M3U8_URL);
             boolean b = mergeVideo(tfile.listFiles(), DOWNLOAD_PATH+"test.mp4");
             System.out.println("合成结果"+b);
 
