@@ -148,7 +148,7 @@ public class Test3 {
         mergeTs(urls);
         System.out.println("合并完成：" + Dir + fileName + ".ts");
         // ffmpeg合并ts文件
-      //  ffmpegMergeTs(urls);
+        ffmpegMergeTs(urls);
         System.out.println("合并完成：" + Dir + fileName + ".mp4");
         // 删除ts文件
         deleteTs(urls);
