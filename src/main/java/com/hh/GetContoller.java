@@ -12,7 +12,11 @@ public class GetContoller {
         new Thread(()->{
             String shu = url.replace("shu", "/");
             System.out.println("============="+shu);
-            M3u8Download.down(shu);
+            try {
+                Test3. down("http://playertest.longtailvideo.com/adaptive/bipbop/gear4/prog_index.m3u8");
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
         }).run();
 
     }
